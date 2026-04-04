@@ -137,7 +137,6 @@ public class HomeFragment extends Fragment {
         clothesInput.setText("");
     }
 
-
     private void showMoneyMap() {
         food.setText(String.valueOf(foodB));
         tran.setText(String.valueOf(tranB));

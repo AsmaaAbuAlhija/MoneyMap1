@@ -122,7 +122,6 @@ public class Signup extends AppCompatActivity {
         editor.apply();
 
     }
-
     private void saveToFirebase(String n,String em, String addre, String ph, String ag) {
        currentUser=mAuth.getCurrentUser();
        uid=currentUser.getUid();

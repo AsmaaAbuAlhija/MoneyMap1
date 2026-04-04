@@ -33,7 +33,6 @@ public class Login extends AppCompatActivity {
     FirebaseUser user;
     FirebaseFirestore db;
     SharedPreferences sharedPreferences;
-
     String email,password,userName;
 
     ImageView imageButton;

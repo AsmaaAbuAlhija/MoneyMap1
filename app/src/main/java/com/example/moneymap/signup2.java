@@ -97,7 +97,6 @@ public class signup2 extends AppCompatActivity {
             }
         }
     }
-
     private void saveToFirebase(int salaryVal2, int savedVal2) {
         currentU=mAuthB.getCurrentUser();
         uid=currentU.getUid();
