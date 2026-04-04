@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button log,sign,exit;
     Intent intent;
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
