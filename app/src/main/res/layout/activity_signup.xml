@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signup"
+    android:background="#F4F4F4">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="0dp"/>
+
+    <ImageButton
+        android:id="@+id/cancelS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="35dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="790dp"
+        android:layout_below="@+id/title"
+        android:layout_centerVertical="true"
+        android:layout_margin="24dp"
+        android:padding="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/emailS"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#DDDDDD"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:background="@drawable/bg_input"
+                android:hint="Enter your Email"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/nameS"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#DDDDDD"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:background="@drawable/bg_input"
+                android:hint="Enter your name"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/adressS"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:backgroundTint="#DDDDDD"
+                android:hint="Enter your address"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/phoneS"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#DDDDDD"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:digits="0123456789"
+                android:hint="Enter your phone number"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textSize="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/ageS"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#DDDDDD"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:hint="Enter your age"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/passS"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#DDDDDD"
+                android:inputType="textPassword"
+                android:hint="Enter your password"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/signDone"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#F074A0"
+                android:text="Done"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

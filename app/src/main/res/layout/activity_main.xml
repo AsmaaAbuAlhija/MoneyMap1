@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Money Map"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:src="@drawable/wallet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track your money,\nControl your future."
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textSize="23dp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/loginH"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:backgroundTint="#F074A0"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/signupH"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Sign Up"
+            android:textColor="#444444"
+            android:textSize="24dp"
+            android:backgroundTint="#DDDDDD"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/exitH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

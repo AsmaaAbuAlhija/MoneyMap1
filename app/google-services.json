@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "555512492031",
+    "project_id": "money-map-ef6e2",
+    "storage_bucket": "money-map-ef6e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555512492031:android:b332f03b6c0d71f13501ca",
+        "android_client_info": {
+          "package_name": "com.example.moneymap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSx6n7KvfWqJZhHOaAkpuuzPVVmmms_rI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
