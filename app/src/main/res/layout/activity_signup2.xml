@@ -8,7 +8,6 @@
     tools:context=".signup2"
     android:background="#F4F4F4">
 
-
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"

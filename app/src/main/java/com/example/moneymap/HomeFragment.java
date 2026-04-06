@@ -344,6 +344,7 @@ public class HomeFragment extends Fragment {
         }
     }
 
+
     @RequiresPermission(Manifest.permission.POST_NOTIFICATIONS)
     private void sendNotification(double spent, int budget) {
         String title,message;
