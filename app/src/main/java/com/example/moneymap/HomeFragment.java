@@ -1,6 +1,7 @@
 package com.example.moneymap;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -191,6 +192,7 @@ public class HomeFragment extends Fragment {
                 });
     }
 
+    @SuppressLint("ResourceType")
     private void addExtraCategoryRow(String categoryName, double value) {
         LinearLayout row=new LinearLayout(getContext());
         row.setOrientation(LinearLayout.HORIZONTAL);
@@ -200,6 +202,7 @@ public class HomeFragment extends Fragment {
         rowParams.setMargins(0,0,0,dpToPx(10));
         row.setLayoutParams(rowParams);
         row.setBackgroundResource(R.drawable.bg_input);
+        row.getBackground().setTint(0xFFDDDDDD);
 
         TextView tvName=new TextView(getContext());
         LinearLayout.LayoutParams nameParams=new LinearLayout.LayoutParams(
@@ -229,6 +232,9 @@ public class HomeFragment extends Fragment {
         etInput.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_DECIMAL);
         etInput.setTextSize(18f);
         etInput.setTag(categoryName);
+        etInput.setBackgroundResource(R.drawable.bg_input);
+        etInput.getBackground().setTint(0xFFFFFFFF);
+        etInput.setHintTextColor(0xFF000000);
 
         row.addView(tvName);
         row.addView(tvValue);
