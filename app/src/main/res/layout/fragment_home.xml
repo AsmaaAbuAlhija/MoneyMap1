@@ -17,14 +17,29 @@
         android:padding="16dp"
         android:layout_marginTop="50dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/hello"
-            android:text="Hi"
-            android:textSize="26dp"
-            android:textStyle="bold"
-            android:textColor="#333"/>
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/hello"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:text="Hi"
+                android:textColor="#333"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/exit"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="200dp"
+                android:src="@drawable/exit"/>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/budget"
@@ -276,6 +291,12 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/exyraCategoryContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -299,14 +320,14 @@
                     android:id="@+id/edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edit  "
+                    android:text="Edit "
                     android:textColor="#F074A0"
                     android:textSize="27sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  |  "
+                    android:text="  |   "
                     android:textSize="27sp"/>
 
                 <TextView

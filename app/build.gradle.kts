@@ -5,13 +5,11 @@ plugins {
 
 android {
     namespace = "com.example.moneymap"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.moneymap"
-        minSdk = 30
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"

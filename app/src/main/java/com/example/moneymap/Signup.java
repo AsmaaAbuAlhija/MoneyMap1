@@ -110,15 +110,12 @@ public class Signup extends AppCompatActivity {
 
     private void saveUserData(String n, String em, String addre, String ph, String ag) {
 
-        uid=mAuth.getCurrentUser().getUid();
-
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("Name",n);
         editor.putString("Email",em);
         editor.putString("Address",addre);
         editor.putString("Phone",ph);
         editor.putString("Age",ag);
-        editor.putString("UserId",uid);
         editor.apply();
 
     }
@@ -131,7 +128,6 @@ public class Signup extends AppCompatActivity {
         information.put("Address",addre);
         information.put("Phone",ph);
         information.put("Age",ag);
-        information.put("UserId",uid);
 
         db.collection("information")
                 .document(uid)

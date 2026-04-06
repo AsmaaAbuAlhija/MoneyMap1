@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="5dp"
-        android:text="Salary"
+        android:text="Monthly Salary"
         android:textColor="@color/black"
         android:textSize="20dp" />
 
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        android:text="How much do you want to save?"
+        android:text="Saving Goal"
         android:textColor="@color/black"
         android:textSize="20dp" />
 
@@ -86,7 +86,7 @@
         android:background="@drawable/bg_input"
         android:layout_marginLeft="20dp"
         android:backgroundTint="#DDDDDD"
-        android:hint="Save money"
+        android:hint="Enter the amount you wish to save"
         android:padding="12dp" />
 
     <Button

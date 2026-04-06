@@ -106,7 +106,6 @@ public class Login extends AppCompatActivity {
                 .document(uid)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {
-
                     if (documentSnapshot.exists()){
                         userName=documentSnapshot.getString("Name");
                         if (userName!=null){

@@ -28,48 +28,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Category"
                 android:textSize="27sp"
-                android:layout_marginTop="23dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginBottom="8dp"
                 android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/category"
-                android:layout_width="355dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:hint="  Enter name of category"
+                android:hint="  Enter category name"
                 android:textSize="22sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
+                android:inputType="text"
                 android:background="@drawable/bg_input"
-                android:backgroundTint="#DDDDDD"/>
+                android:backgroundTint="#DDDDDD"
+                android:padding="12dp"
+                android:layout_marginBottom="20dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Value"
-                android:layout_marginTop="20dp"
                 android:textSize="27sp"
-                android:layout_marginLeft="40dp"
-                android:textColor="@color/black" />
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/value"
-                android:layout_width="355dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:hint="  Enter value"
                 android:textSize="22sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
+                android:inputType="numberDecimal"
                 android:background="@drawable/bg_input"
                 android:backgroundTint="#DDDDDD"
-                android:layout_marginBottom="33dp"/>
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
