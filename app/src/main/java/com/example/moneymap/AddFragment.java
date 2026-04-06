@@ -95,9 +95,15 @@ public class AddFragment extends Fragment {
                             .document(uid)
                             .set(updates, SetOptions.merge())
                             .addOnSuccessListener(unused -> {
-                                Toast.makeText(getContext(), "" + categoryName + "added!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "" + categoryName + " added!", Toast.LENGTH_SHORT).show();
                                 etCategory.setText("");
                                 etValue.setText("");
+
+                                HomeFragment homeFragment=(HomeFragment)
+                                        getParentFragmentManager().findFragmentByTag("home");
+                                if (homeFragment != null){
+                                    homeFragment.refreshOthers(newOthers);
+                                }
                             })
                             .addOnFailureListener(e ->
                                     Toast.makeText(getContext(), "Failed to add category", Toast.LENGTH_SHORT).show());

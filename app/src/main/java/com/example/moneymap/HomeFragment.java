@@ -46,7 +46,7 @@ public class HomeFragment extends Fragment {
     SharedPreferences sharedPreferences;
 
     private static final List<String> FIXED_CATEGORIES =
-            Arrays.asList("Food","Transport","Clothes","HomeSupplies","Other");
+            Arrays.asList("Food","Transport","Clothes","HomeSupplies","Others");
 
     int dailyB;
     double total;
@@ -344,13 +344,12 @@ public class HomeFragment extends Fragment {
         }
     }
 
-
     @RequiresPermission(Manifest.permission.POST_NOTIFICATIONS)
     private void sendNotification(double spent, int budget) {
         String title,message;
         if (spent > budget){
             title="⚠ Over Budget!";
-            message="You spent" + String.format("%.2f",spent) + " but your budget was" + budget + ". You have to control yourself!!";
+            message="You spent " + String.format("%.2f",spent) + " but your budget was" + budget + ". You have to control yourself!!";
         }
         else {
             if (spent == budget){
@@ -359,7 +358,7 @@ public class HomeFragment extends Fragment {
             }
             else {
                 title="✓ Great job";
-                message="You saved" + String.format("%.2f",budget-spent) + " today! You've done a great job!";
+                message="You saved " + String.format("%.2f",budget-spent) + " today! You've done a great job!";
             }
         }
 
@@ -374,8 +373,14 @@ public class HomeFragment extends Fragment {
         try {
             NotificationManagerCompat.from(requireContext()).notify(1,builder.build());
         } catch (SecurityException e) {
-            Toast.makeText(getContext(), "Permission noy granted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Permission not granted", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void refreshOthers(double newOthersValue){
+        otherB=newOthersValue;
+        other.setText(String.format("%.1f",otherB));
+        loadExtraCategories();
     }
 
     private void showMoneyMap() {

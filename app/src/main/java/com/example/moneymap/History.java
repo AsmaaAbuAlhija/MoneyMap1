@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.text.SimpleDateFormat;
@@ -73,6 +74,7 @@ public class History extends AppCompatActivity {
         db.collection("inputs")
                 .document(uid)
                 .collection("days")
+                .orderBy("Timestamp", Query.Direction.ASCENDING)
                 .get()
                 .addOnSuccessListener(querySnapshot -> {
                     if (querySnapshot.isEmpty()){
@@ -82,21 +84,10 @@ public class History extends AppCompatActivity {
                     tvEmpty.setVisibility(View.GONE);
                     listContainer.removeAllViews();
 
-                    List<Map<String, Object>> days=new ArrayList<>();
-                    for (QueryDocumentSnapshot doc:querySnapshot)
-                        days.add(doc.getData());
-
-                    Collections.sort(days, (a,b) -> {
-                        Long ta=(Long) a.get("Timestamp");
-                        Long tb=(Long) b.get("Timestamp");
-                        if (ta == null) ta=0L;
-                        if (tb == null) tb=0L;
-                        return tb.compareTo(ta);
-                    });
-
-                    int dayNum=days.size();
-                    for (Map<String, Object> day:days)
-                        addDayCard(day, dayNum);
+                    int dayNum=1;
+                    for (QueryDocumentSnapshot doc:querySnapshot){
+                        addDayCard(doc.getData(), dayNum++);
+                    }
                 })
                 .addOnFailureListener(e ->
                         Toast.makeText(this, "Failed to load history", Toast.LENGTH_SHORT).show());
