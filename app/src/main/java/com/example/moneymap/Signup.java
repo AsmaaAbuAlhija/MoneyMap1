@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseUser;
@@ -38,6 +39,7 @@ public class Signup extends AppCompatActivity {
     ImageView imageButton;
     EditText email,password,phone,address,age,name;
     Button sign;
+    TextView tvPass;
 
     String em,pass,addre,ph,ag,n,uid;
 
@@ -63,6 +65,7 @@ public class Signup extends AppCompatActivity {
         address=findViewById(R.id.adressS);
         age=findViewById(R.id.ageS);
         name=findViewById(R.id.nameS);
+        tvPass=findViewById(R.id.tvPass);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,21 +90,26 @@ public class Signup extends AppCompatActivity {
 
         if (!em.isEmpty() && !em.equals(null) && !pass.isEmpty() && !pass.equals(null) && !addre.isEmpty() && !addre.equals(null)
         && !ph.isEmpty() && !ph.equals(null) && !ag.isEmpty() && !ag.equals(null)){
-            mAuth.createUserWithEmailAndPassword(em,pass)
-                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                         @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            saveUserData(n,em,addre,ph,ag);
-                            saveToFirebase(n,em,addre,ph,ag);
+            if (pass.length() >= 6) {
+                mAuth.createUserWithEmailAndPassword(em, pass)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    saveUserData(n, em, addre, ph, ag);
+                                    saveToFirebase(n, em, addre, ph, ag);
 
-                            moveToBudget();
-                        }
-                        else {
-                            Toast.makeText(Signup.this, "create user failed", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-            });
+                                    tvPass.setVisibility(View.GONE);
+                                    moveToBudget();
+                                } else {
+                                    Toast.makeText(Signup.this, "create user failed", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+            }
+            else {
+                tvPass.setVisibility(View.VISIBLE);
+            }
         }
         else{
             Toast.makeText(Signup.this, "fill the details...", Toast.LENGTH_SHORT).show();
