@@ -123,7 +123,7 @@ public class History extends AppCompatActivity {
         tvDay.setTextColor(ContextCompat.getColor(this, R.color.black));
 
         TextView tvSpent=new TextView(this);
-        tvSpent.setText("Spent: " +String.format(Locale.getDefault(), "%.2f", budget));
+        tvSpent.setText("Spent: " +String.format(Locale.getDefault(), "%.2f", spend));
         tvSpent.setTextSize(18f);
         tvSpent.setPadding(0,dpToPx(6),0,0);
         tvSpent.setTextColor(spend > budget
