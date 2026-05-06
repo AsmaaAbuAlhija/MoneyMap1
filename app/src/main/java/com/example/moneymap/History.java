@@ -121,7 +121,7 @@ public class History extends AppCompatActivity {
         tvDay.setTextSize(20f);
         tvDay.setTypeface(null, Typeface.BOLD);
         tvDay.setTextColor(ContextCompat.getColor(this, R.color.black));
- 
+
         TextView tvSpent=new TextView(this);
         tvSpent.setText("Spent: " +String.format(Locale.getDefault(), "%.2f", spend));
         tvSpent.setTextSize(18f);
